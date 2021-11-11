@@ -1,0 +1,16 @@
+.navbar__desktop {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.navbar__mobile {
+  @media screen and (min-width: 1400px) {
+    display: none;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,20 @@
+.MobileMenu {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 70%;
+
+  button {
+    background: white;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+}

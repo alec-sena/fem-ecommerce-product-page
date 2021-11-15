@@ -2,15 +2,17 @@ import { useState } from 'react';
 import useToggle from '../hooks/useToggle.js';
 import Navbar from './Navbar';
 import MobileMenu from './MobileMenu';
+import Carousel from './Carousel';
 
 function ProductPage() {
 
-    const [menuIsOpen, toggleMenuIsOpen] = useToggle(true); //true for testing purposes
+    const [menuIsOpen, toggleMenuIsOpen] = useToggle();
   
     return (
         <>
-            <Navbar setMenuIsOpen={toggleMenuIsOpen} />
-            {menuIsOpen && <MobileMenu />}
+            <Navbar toggleMenuIsOpen={toggleMenuIsOpen} />
+            {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
+            <Carousel />
         </>
   );
 }

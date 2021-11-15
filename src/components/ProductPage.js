@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import useToggle from '../hooks/useToggle.js';
 import Navbar from './Navbar';
 import MobileMenu from './MobileMenu';
 
 function ProductPage() {
 
-    const [menuIsOpen, setMenuIsOpen] = useState(true); //true for testing purposes
+    const [menuIsOpen, toggleMenuIsOpen] = useToggle(true); //true for testing purposes
   
     return (
         <>
-            <Navbar />
+            <Navbar setMenuIsOpen={toggleMenuIsOpen} />
             {menuIsOpen && <MobileMenu />}
         </>
   );

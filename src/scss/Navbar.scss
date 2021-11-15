@@ -9,6 +9,39 @@
 }
 
 .navbar__mobile {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  .navbar__mobile--left-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1rem 0;
+
+    button,
+    svg:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    button {
+      background: white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .navbar__mobile--right-side {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  img {
+    height: 1.2rem; // match logo
+    width: auto;
+  }
+
   @media screen and (min-width: 1400px) {
     display: none;
     visibility: hidden;

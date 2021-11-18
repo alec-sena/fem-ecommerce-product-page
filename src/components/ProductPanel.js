@@ -5,12 +5,12 @@ function ProductPanel(props){
     
     const [quantity, setQuantity] = useState(0);
 
-    // need to check if product is already in cart and update quantity rather than create new instance
     function handleCart(){
         if(quantity > 0){
-            let product = {};
-            product[props.product.name] = quantity;
-            props.setCart([...props.cart, product]);
+            props.setCart(prev => ({
+                ...prev,
+                [props.product.id]: quantity
+            }));
         }
     }
 

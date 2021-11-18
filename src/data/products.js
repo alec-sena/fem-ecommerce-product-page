@@ -1,5 +1,6 @@
 const products = {
     fallLimitedEditionSneakers: {
+        id: 'fallLimitedEditionSneakers',
         name: 'Fall Limited Edition Sneakers',
         price: 250.00,
         discount: .5

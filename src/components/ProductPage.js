@@ -9,7 +9,7 @@ import products from '../data/products.js';
 function ProductPage() {
 
     const [menuIsOpen, toggleMenuIsOpen] = useToggle();
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState({});
   
     return (
         <>

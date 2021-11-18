@@ -5,6 +5,7 @@ import MobileMenu from './MobileMenu';
 import Carousel from './Carousel';
 import ProductPanel from './ProductPanel';
 import products from '../data/products.js';
+// import '../scss/partials/_variables.scss';
 
 function ProductPage() {
 

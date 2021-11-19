@@ -1,11 +1,11 @@
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import '../scss/Carousel.scss';
-import product1 from '../images/image-product-1.jpg';
+/* import product1 from '../images/image-product-1.jpg';
 import product2 from '../images/image-product-2.jpg';
 import product3 from '../images/image-product-3.jpg';
 import product4 from '../images/image-product-4.jpg';
-
+ */
 
 function Carousel(props){
 
@@ -17,7 +17,7 @@ function Carousel(props){
       >
         <Slider>
           {props.images.map((image, idx) => (
-            <Slide index={idx}><img src={image} alt={`product-${idx}`} /></Slide>
+            <Slide index={idx} key={idx} ><img src={image} alt={`product-${idx}`} /></Slide>
           ))}
         </Slider>
         <div className="carousel__controls">

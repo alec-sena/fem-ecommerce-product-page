@@ -11,10 +11,18 @@ function ProductPage() {
 
     const [menuIsOpen, toggleMenuIsOpen] = useToggle();
     const [cart, setCart] = useState({});
+
+    function countItemsInCart(){
+        let counter = 0;
+        for(let key in cart){
+            counter += cart[key];
+        }
+        return counter;
+    }
   
     return (
         <>
-            <Navbar toggleMenuIsOpen={toggleMenuIsOpen} />
+            <Navbar toggleMenuIsOpen={toggleMenuIsOpen} countItemsInCart={countItemsInCart} />
             {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
             <div>
                 <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />

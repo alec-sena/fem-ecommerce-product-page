@@ -1,3 +1,5 @@
+@import "./partials/_variables";
+
 .navbar__desktop {
   display: none;
   visibility: hidden;
@@ -46,4 +48,24 @@
     display: none;
     visibility: hidden;
   }
+
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+#cart-quantity {
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: white;
+  background-color: $orange;
+  width: 1rem;
+  height: 0.75rem;
+  float: right;
+  z-index: 1;
+  position: absolute;
+  transform: translate(-70%, -35%);
+  text-align: center;
+  border-radius: 0.6rem;
 }

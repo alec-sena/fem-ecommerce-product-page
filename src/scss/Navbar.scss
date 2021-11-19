@@ -1,6 +1,6 @@
 @import "./partials/_variables";
 
-.navbar__desktop {
+.Navbar__Desktop {
   display: none;
   visibility: hidden;
 
@@ -10,20 +10,26 @@
   }
 }
 
-.navbar__mobile {
-  display: grid;
-  grid-template-columns: 70% 30%;
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .navbar__mobile--left-side {
+.Navbar__Mobile {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  width: 90%;
+
+  .Navbar__Mobile--LeftSide {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
     margin: 1rem 0;
 
-    button,
     svg:not(:first-child) {
       margin-left: 1rem;
+      transform: translateY(-11%);
     }
 
     button {
@@ -33,15 +39,19 @@
     }
   }
 
-  .navbar__mobile--right-side {
+  .Navbar__Mobile--RightSide {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-  }
 
-  img {
-    height: 1.2rem; // match logo
-    width: auto;
+    img {
+      height: 1.625rem; // match logo
+      width: auto;
+    }
+
+    svg {
+      margin-right: 1.4rem;
+    }
   }
 
   @media screen and (min-width: 1400px) {
@@ -55,7 +65,7 @@
   }
 }
 
-#cart-quantity {
+#CartQuantity {
   font-size: 0.55rem;
   font-weight: bold;
   color: white;
@@ -63,9 +73,10 @@
   width: 1rem;
   height: 0.75rem;
   float: right;
+  margin-right: 1.4rem;
   z-index: 1;
   position: absolute;
-  transform: translate(-70%, -35%);
+  transform: translate(-210%, -40%);
   text-align: center;
   border-radius: 0.6rem;
 }

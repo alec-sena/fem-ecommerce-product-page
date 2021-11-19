@@ -7,7 +7,7 @@ import product3 from '../images/image-product-3.jpg';
 import product4 from '../images/image-product-4.jpg';
 
 
-function Carousel(){
+function Carousel(props){
 
     return(
       <CarouselProvider
@@ -16,10 +16,9 @@ function Carousel(){
         totalSlides={4}
       >
         <Slider>
-          <Slide index={0}><img src={product1} alt="product one" /></Slide>
-          <Slide index={1}><img src={product2} alt="product two" /></Slide>
-          <Slide index={2}><img src={product3} alt="product three" /></Slide>
-          <Slide index={3}><img src={product4} alt="product four" /></Slide>
+          {props.images.map((image, idx) => (
+            <Slide index={idx}><img src={image} alt={`product-${idx}`} /></Slide>
+          ))}
         </Slider>
         <div className="carousel__controls">
           <ButtonBack><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></ButtonBack>
@@ -35,3 +34,8 @@ function Carousel(){
 export default Carousel;
 
 // documentation: https://www.npmjs.com/package/pure-react-carousel
+
+/* <Slide index={0}><img src={product1} alt="product one" /></Slide>
+<Slide index={1}><img src={product2} alt="product two" /></Slide>
+<Slide index={2}><img src={product3} alt="product three" /></Slide>
+<Slide index={3}><img src={product4} alt="product four" /></Slide> */

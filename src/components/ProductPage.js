@@ -17,7 +17,7 @@ function ProductPage() {
             <Navbar toggleMenuIsOpen={toggleMenuIsOpen} />
             {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
             <div>
-                <Carousel />
+                <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />
                 <ProductPanel product={products.fallLimitedEditionSneakers} cart={cart} setCart={setCart} />
             </div>
         </>

@@ -8,10 +8,15 @@ function ProductPanel(props){
     const [quantity, setQuantity] = useState(0);
 
     function handleCart(){
-        if(quantity > 0){
+        if(quantity >= 0){
             props.setCart(prev => ({
                 ...prev,
-                [props.product.id]: quantity
+                [props.product.id]: {
+                    name: props.product.name,
+                    quantity: quantity,
+                    price: props.product.price,
+                    discount: props.product.discount
+                }
             }));
         }
     }

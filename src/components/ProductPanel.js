@@ -13,9 +13,7 @@ function ProductPanel(props){
                 ...prev,
                 [props.product.id]: {
                     name: props.product.name,
-                    quantity: quantity,
-                    price: props.product.price,
-                    discount: props.product.discount
+                    quantity: quantity
                 }
             }));
         }

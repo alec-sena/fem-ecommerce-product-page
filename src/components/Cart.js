@@ -2,18 +2,23 @@ import CartCard from './CartCard';
 import '../scss/Cart.scss';
 
 function Cart(props){
+    const items = Object.keys(props.cart);
+
     return(
         <div className="Cart">
+            <h2>Cart</h2>
             <div>
-                <h2>Cart</h2>
-            </div>
-            <div>
-                {Object.keys(props.cart).length === 0 ? 
-                <p>Your cart is empty</p> 
-                :
-                <div>{Array.from(props.cart).map((item, idx) => <CartCard key={idx} item={item} />)}</div>
-                }
-            </div>
+            {items.length === 0 ? 
+                <p>Your cart is empty</p>
+            :
+                items.map((item, idx) => <CartCard key={idx} name={props.cart[item].name} quantity={props.cart[item].quantity} />)
+            }
+            </div> 
+           
+{/*             <div>
+                
+                
+            </div> */}
         </div>
     )
 }

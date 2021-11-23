@@ -25,7 +25,7 @@ function ProductPage() {
     return (
         <>
             <Navbar toggleMenuIsOpen={toggleMenuIsOpen} countItemsInCart={countItemsInCart} toggleCartIsOpen={toggleCartIsOpen} />
-            {cartIsOpen && <Cart cart={cart} />}
+            {cartIsOpen && <Cart cart={cart} products={products} />}
             {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
             <div>
                 <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />

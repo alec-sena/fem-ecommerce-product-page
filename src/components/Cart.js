@@ -7,22 +7,18 @@ function Cart(props){
     return(
         <div className="Cart">
             <h2>Cart</h2>
-            <div>
+            <hr />
+            <div className="Cart__CardsContainer">
             {items.length === 0 ? 
-                <p>Your cart is empty</p>
+                <p id="cart-empty">Your cart is empty</p>
             :
-                items.map((item, idx) => <CartCard key={idx} name={props.cart[item].name} quantity={props.cart[item].quantity} />)
+                items.map((item, idx) => <CartCard key={idx} item={props.cart[item]} />)
             }
             </div> 
-           
-{/*             <div>
-                
-                
-            </div> */}
         </div>
     )
 }
 
 export default Cart;
 
-// figure out why CartCards aren't rendering. Conitinal works. Something about the loop is wonky
+// name={props.cart[item].name} quantity={props.cart[item].quantity}

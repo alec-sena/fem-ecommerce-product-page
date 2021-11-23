@@ -1,6 +1,9 @@
 @import "./partials/variables";
 
 .CartCard {
-  background-color: $white;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: 15% 80% 5%;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 }

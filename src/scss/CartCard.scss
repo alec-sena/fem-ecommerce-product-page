@@ -2,8 +2,27 @@
 
 .CartCard {
   display: grid;
-  grid-template-columns: 15% 80% 5%;
+  grid-template-columns: 15% 75% 5%;
+  column-gap: 2.5%;
   z-index: 2;
   height: 100%;
-  width: 100%;
+  width: 90%;
+
+  .CartCard__ThumbnailContainer {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .CardCard__ButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+    }
+  }
 }

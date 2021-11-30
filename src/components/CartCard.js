@@ -1,14 +1,17 @@
 import '../scss/CartCard.scss';
 
 function CartCard(props){
+
+    const { name, price, discount, quantity, thumbnail } = props.item;
+
     return(
         <div className="CartCard">
             <div className="CartCard__ThumbnailContainer">
-                <img src={props.thumbnail} />
+                <img src={thumbnail} />
             </div>
             <div className="CartCard__ProductContainer">
-                <p>{props.name}</p>
-                <p>{props.quantity}</p>
+                <p>{name}</p>
+                <p>{`$${price * discount}.00 x ${quantity} `}<strong>{`$${(price * discount) * quantity}.00`}</strong></p>
             </div>
             <div className="CardCard__ButtonContainer">
                 <button>

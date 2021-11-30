@@ -3,16 +3,17 @@ import '../scss/Cart.scss';
 
 function Cart(props){
     const items = Object.keys(props.cart);
+    const cards = items.filter(item => props.cart[item].quantity > 0);
 
     return(
         <div className="Cart">
             <h2>Cart</h2>
             <hr />
             <div className="Cart__CardsContainer">
-            {items.length === 0 ? 
+            {cards.length === 0 ? 
                 <p id="cart-empty">Your cart is empty</p>
             :
-                items.map((item, idx) => <CartCard key={idx} item={props.cart[item]} />)
+                cards.map((item, idx) => <CartCard key={idx} item={props.cart[item]} setCart={props.setCart} />)
             }
             </div> 
         </div>

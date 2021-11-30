@@ -21,5 +21,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 16rem;
+  min-height: 8rem; //temp value, needs adjusting and/or removal (replace with margin/padding)
+}
+
+.Cart__ButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    height: 3.5rem;
+    width: 85%;
+    background-color: $orange;
+    border-radius: 0.5rem;
+    border: none;
+    color: $white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    margin-bottom: 2rem;
+  }
 }

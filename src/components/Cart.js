@@ -15,7 +15,10 @@ function Cart(props){
             :
                 cards.map((item, idx) => <CartCard key={idx} item={props.cart[item]} setCart={props.setCart} />)
             }
-            </div> 
+            </div>
+            <div className="Cart__ButtonContainer">
+                <button>Checkout</button> 
+            </div>
         </div>
     )
 }

@@ -11,14 +11,17 @@ function Cart(props){
             <hr />
             <div className="Cart__CardsContainer">
             {cards.length === 0 ? 
-                <p id="cart-empty">Your cart is empty</p>
+                <div id="CartEmpty">
+                    <p>Your cart is empty</p>
+                </div>
             :
                 cards.map((item, idx) => <CartCard key={idx} item={props.cart[item]} setCart={props.setCart} />)
             }
             </div>
+            {cards.length > 0 && 
             <div className="Cart__ButtonContainer">
                 <button>Checkout</button> 
-            </div>
+            </div>}
         </div>
     )
 }

@@ -21,8 +21,10 @@ function CartCard(props){
                 <img src={thumbnail} />
             </div>
             <div className="CartCard__ProductContainer">
-                <p>{name}</p>
-                <p>{`$${price * discount}.00 x ${quantity} `}<strong>{`$${(price * discount) * quantity}.00`}</strong></p>
+                <div>
+                    <p>{name}</p>
+                    <p>{`$${price * discount}.00 x ${quantity} `}<strong>{`$${(price * discount) * quantity}.00`}</strong></p>
+                </div>
             </div>
             <div className="CardCard__ButtonContainer">
                 <button onClick={handleCart}>

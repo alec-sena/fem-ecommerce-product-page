@@ -3,22 +3,30 @@
 .CartCard {
   display: grid;
   grid-template-columns: 15% 75% 5%;
-  column-gap: 2.5%;
+  column-gap: 2%;
   z-index: 2;
   height: 100%;
   width: 85%;
+  margin-top: 1.5rem;
 
-  .CartCard__ThumbnailContainer {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
+  .CartCard__ProductContainer,
+  .CartCard__ThumbnailContainer,
   .CardCard__ButtonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 3rem;
+
+    p {
+      font-size: 0.8rem;
+      color: $dark-grayish-blue;
+    }
+
+    img {
+      height: 2.5rem;
+      width: auto;
+      border-radius: 4px;
+    }
 
     button {
       background: none;

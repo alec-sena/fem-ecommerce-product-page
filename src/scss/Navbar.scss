@@ -1,6 +1,6 @@
 @import "./partials/_variables";
 
-.Navbar__Desktop {
+/* .Navbar__Desktop {
   display: none;
   visibility: hidden;
 
@@ -8,7 +8,7 @@
     display: block;
     visibility: visible;
   }
-}
+} */
 
 .Navbar {
   display: flex;
@@ -16,55 +16,101 @@
   align-items: center;
   z-index: 10;
   background-color: white;
-}
+  width: 100%;
 
-.Navbar__Mobile {
-  display: grid;
-  grid-template-columns: 75% 25%;
-  width: 90%;
+  .Navbar__Container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 75% 25%;
 
-  .Navbar__Mobile--LeftSide {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1rem 0;
+    @media screen and (min-width: 1440px) {
+      width: 77%;
+      height: 6rem;
+      border-bottom: 1px solid $light-grayish-blue;
+    }
 
-    svg:not(:first-child) {
-      margin-left: 1rem;
-      transform: translateY(-11%);
+    .Navbar__LeftSide {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1rem 0;
+
+      svg:not(:first-child) {
+        margin-left: 1rem;
+        transform: translateY(-11%);
+      }
+
+      button {
+        background: white;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (min-width: 1440px) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+
+      .Navbar__Links {
+        display: none;
+        visibility: hidden;
+
+        li {
+          margin-left: 3rem;
+
+          a {
+            font-size: 0.9rem;
+            color: $dark-grayish-blue;
+            cursor: pointer;
+            text-decoration: none;
+          }
+
+          a:hover,
+          a:active {
+            color: black;
+          }
+        }
+
+        @media screen and (min-width: 1440px) {
+          display: flex;
+          visibility: visible;
+          width: 50%;
+          list-style: none;
+        }
+      }
+    }
+
+    .Navbar__RightSide {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      img {
+        height: 1.625rem; // match logo
+        width: auto;
+      }
+
+      svg {
+        margin-right: 1.4rem;
+      }
     }
 
     button {
-      background: white;
+      background: none;
       border: none;
       cursor: pointer;
     }
   }
 
-  .Navbar__Mobile--RightSide {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    img {
-      height: 1.625rem; // match logo
-      width: auto;
-    }
-
-    svg {
-      margin-right: 1.4rem;
-    }
-  }
-
-  @media screen and (min-width: 1400px) {
+  hr {
     display: none;
     visibility: hidden;
-  }
 
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
+    @media screen and (min-width: 1440px) {
+      display: block;
+      visibility: visible;
+      width: 77%;
+    }
   }
 }
 

@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu';
 import Carousel from './Carousel';
 import ProductPanel from './ProductPanel';
 import products from '../data/products.js';
-// import '../scss/partials/_variables.scss';
+import '../scss/ProductPage.scss';
 
 function ProductPage() {
 
@@ -23,15 +23,15 @@ function ProductPage() {
     }
   
     return (
-        <>
+        <div className="ProductPage">
             <Navbar toggleMenuIsOpen={toggleMenuIsOpen} countItemsInCart={countItemsInCart} toggleCartIsOpen={toggleCartIsOpen} />
             {cartIsOpen && <Cart cart={cart} products={products} setCart={setCart} />}
             {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
-            <div>
+            <div className="ProductPage__Container">
                 <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />
                 <ProductPanel product={products.fallLimitedEditionSneakers} cart={cart} setCart={setCart} />
             </div>
-        </>
+        </div>
   );
 }
 

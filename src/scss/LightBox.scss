@@ -1,0 +1,9 @@
+.LightBox {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    visibility: visible;
+  }
+}

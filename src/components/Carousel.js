@@ -10,24 +10,24 @@ import product4 from '../images/image-product-4.jpg';
 function Carousel(props){
 
     return(
-      <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={100}
-        totalSlides={4}
-      >
-        <Slider>
-          {props.images.map((image, idx) => (
-            <Slide index={idx} key={idx} ><img src={image} alt={`product-${idx}`} /></Slide>
-          ))}
-        </Slider>
-        <div className="carousel__controls">
-          <ButtonBack><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></ButtonBack>
-          <ButtonNext><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></ButtonNext>
+      <div className="Carousel">
+          <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={100}
+            totalSlides={4}
+          >
+            <Slider className="Carousel__Slider">
+              {props.images.map((image, idx) => (
+                <Slide index={idx} key={idx} ><img src={image} alt={`product-${idx}`} /></Slide>
+              ))}
+            </Slider>
+            <div className="Carousel__Controls">
+              <ButtonBack><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></ButtonBack>
+              <ButtonNext><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" strokeWidth="3" fill="none" fillRule="evenodd"/></svg></ButtonNext>
+            </div> 
+          </CarouselProvider>
         </div>
-        <div className="carousel__thumbnails">
-          <span>carousel__thumbnails</span>
-        </div>
-      </CarouselProvider>
+        
     )
 }
 

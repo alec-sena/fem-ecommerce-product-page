@@ -1,10 +1,26 @@
-.carousel img {
+/* .Carousel__Slider {
+  @media screen and (min-width: 1440px) {
+    width: 80%;
+    height: auto;
+    margin-top: 6rem;
+    border-radius: 1rem;
+  }
+} */
+
+.Carousel {
+  @media screen and (min-width: 1440px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.Carousel img {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.carousel__controls {
+.Carousel__Controls {
   position: absolute;
   top: -1rem; // move carousel controls div below navbar
   bottom: 0;
@@ -25,6 +41,11 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 1440px) {
+      display: none;
+      visibility: hidden;
+    }
+
     svg {
       transform: scale(0.7);
 
@@ -35,12 +56,21 @@
   }
 }
 
-.carousel__thumbnails {
+/* .Carousel__Thumbnails {
   visibility: hidden;
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1440px) {
     visibility: visible;
-    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Carousel__Thumbnail {
+      width: 20%;
+      height: auto;
+    }
   }
 }
+ */

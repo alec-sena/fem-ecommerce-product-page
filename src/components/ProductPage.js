@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Cart from './Cart';
 import MobileMenu from './MobileMenu';
 import Carousel from './Carousel';
+import LightBox from './LightBox';
 import ProductPanel from './ProductPanel';
 import products from '../data/products.js';
 import '../scss/ProductPage.scss';
@@ -28,8 +29,11 @@ function ProductPage() {
             {cartIsOpen && <Cart cart={cart} products={products} setCart={setCart} />}
             {menuIsOpen && <MobileMenu toggleMenuIsOpen={toggleMenuIsOpen} />}
             <div className="ProductPage__Container">
-                <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />
-                <ProductPanel product={products.fallLimitedEditionSneakers} cart={cart} setCart={setCart} />
+                <div className="ProductPage__Subcontainer">
+                    <Carousel images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />
+                    <LightBox images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />
+                    <ProductPanel product={products.fallLimitedEditionSneakers} cart={cart} setCart={setCart} />
+                </div>
             </div>
         </div>
   );

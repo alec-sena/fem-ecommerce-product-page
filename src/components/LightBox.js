@@ -8,7 +8,7 @@ function LightBox(props) {
     return (
         <div className="LightBox">
             <SRLWrapper>
-                <a href={props.images[2]}>
+                <a href={props.images[]}>
                     <img src={props.thumbnails[2]} alt="thumbnail-0" />
                 </a>
                 <a href={props.images[3]}>
@@ -18,13 +18,7 @@ function LightBox(props) {
                     <img src={props.thumbnails[4]} alt="thumbnail-1" />
                 </a>
                 <a href={props.images[1]}>
-                    <Image
-                    src={props.thumbnails[1]}
-                    alt="Picture of the author"
-                    width={500}
-                    height={900}
-                    srl_gallery_image="true" // Add this if your thumbnail is not recognized
-                    />
+                    <img src={props.thumbnails[1]} alt="thumbnail-1" />
                 </a>
             </SRLWrapper>
         </div>

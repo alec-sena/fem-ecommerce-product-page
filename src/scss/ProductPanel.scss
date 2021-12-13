@@ -16,13 +16,36 @@
     font-size: 1.875rem;
     font-weight: bold;
   }
+
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+    margin: 0;
+
+    h2 {
+      font-size: 0.813rem;
+      letter-spacing: 2px;
+      // margin: 4rem 0 1.688rem 0;
+      margin: 9.5rem 0 1.688rem 0;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      letter-spacing: 1px;
+      line-height: 3rem;
+      width: 27.813rem;
+    }
+  }
 }
 
 .ProductPanel__Description {
   color: $dark-grayish-blue;
-  size: 0.75rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.625rem;
   margin: 1rem 0;
+
+  @media screen and (min-width: 1440px) {
+    width: 50ch;
+  }
 }
 
 .ProductPanel__PriceContainer {
@@ -49,6 +72,10 @@
     border-radius: 0.5rem;
     padding: 0.25rem;
   }
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
 }
 
 .ProductPanel__NetPrice {
@@ -61,6 +88,19 @@
   color: $grayish-blue;
   font-weight: bold;
   text-decoration: line-through;
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 0.625rem;
+  }
+}
+
+.ProductPanel__Controls {
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 9.813rem 17rem;
+    column-gap: 1rem;
+    width: 27.813rem;
+  }
 }
 
 .ProductPanel__QuantityContainer {
@@ -77,6 +117,9 @@
     background: $light-grayish-blue;
     border: none;
     cursor: pointer;
+    @media screen and (min-width: 1440px) {
+      padding: 0 4%;
+    }
   }
 
   p {

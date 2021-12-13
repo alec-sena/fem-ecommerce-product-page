@@ -1,1 +1,27 @@
+.ProductGallery {
+  width: 100%;
+}
 
+.ProductGallery__MainImage {
+  width: 75%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.ProductGallery__Thumbnails {
+  margin-top: 3rem;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductGallery__ThumbnailButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  z-index: 10;
+}

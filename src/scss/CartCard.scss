@@ -9,6 +9,10 @@
   width: 85%;
   margin-top: 1.5rem;
 
+  @media screen and (min-width: 1440px) {
+    width: 86.6%;
+  }
+
   .CartCard__ProductContainer,
   .CartCard__ThumbnailContainer,
   .CardCard__ButtonContainer {
@@ -31,6 +35,18 @@
     button {
       background: none;
       border: none;
+    }
+
+    @media screen and (min-width: 1440px) {
+      height: 3.25rem;
+
+      p {
+        font-size: 1rem;
+      }
+
+      img {
+        height: 3.125rem;
+      }
     }
   }
 }

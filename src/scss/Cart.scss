@@ -11,10 +11,23 @@
   /* box shadow is too dark, possibly too long */
   // box-shadow: 0 2rem 2rem -0.5rem $grayish-blue;
 
+  @media screen and (min-width: 1440px) {
+    height: 16rem;
+    width: 22.5rem;
+    postion: absolute;
+    top: 5.875rem;
+    right: 5.563rem;
+    box-shadow: 1px 14px 17px 11px rgba(182, 188, 200, 0.57);
+  }
+
   h2 {
     margin: 1rem;
     margin-bottom: 1.25rem;
     font-size: 1rem;
+
+    @media screen and (min-width: 1440px) {
+      margin: 1.688rem 1.5rem;
+    }
   }
 
   hr {
@@ -56,5 +69,12 @@
     font-weight: bold;
     margin: 1rem;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+
+    @media screen and (min-width: 1440px) {
+      height: 3.5rem;
+      width: 86.6%;
+      margin: 1.5rem 0 0 0;
+    }
   }
 }

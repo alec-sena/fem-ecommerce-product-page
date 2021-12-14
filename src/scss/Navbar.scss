@@ -26,6 +26,7 @@
     @media screen and (min-width: 1440px) {
       width: 77%;
       height: 6rem;
+      margin-bottom: 2.813rem;
       border-bottom: 1px solid $light-grayish-blue;
     }
 
@@ -33,7 +34,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 1rem 0;
+      /* margin: 1rem 0; */
 
       svg:not(:first-child) {
         margin-left: 1rem;
@@ -59,7 +60,7 @@
           margin-left: 3rem;
 
           a {
-            font-size: 0.9rem;
+            font-size: 0.938rem;
             color: $dark-grayish-blue;
             cursor: pointer;
             text-decoration: none;
@@ -68,6 +69,17 @@
           a:hover,
           a:active {
             color: black;
+          }
+
+          @media screen and (min-width: 1440px) {
+            a {
+              height: 1.625rem;
+              padding-bottom: 2.2rem;
+              margin-top: 3.5rem;
+            }
+            a:hover {
+              border-bottom: 4px solid $orange;
+            }
           }
         }
 
@@ -88,10 +100,18 @@
       img {
         height: 1.625rem; // match logo
         width: auto;
+
+        @media screen and (min-width: 1440px) {
+          height: 3.125rem;
+        }
       }
 
       svg {
         margin-right: 1.4rem;
+
+        @media screen and (min-width: 1440px) {
+          margin-right: 2.886rem;
+        }
       }
     }
 
@@ -129,4 +149,8 @@
   text-align: center;
   border-radius: 0.6rem;
   cursor: pointer;
+
+  @media screen and (min-width: 1440px) {
+    transform: translate(-350%, -40%);
+  }
 }

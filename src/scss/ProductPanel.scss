@@ -139,8 +139,17 @@
   font-weight: bold;
   margin-bottom: 5.5rem;
   box-shadow: 0 2.5rem 2.5rem -0.5rem $pale-orange;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   svg {
     margin-right: 1rem;
   }
+}
+
+.ProductPanel__CartButton:hover {
+  opacity: 0.5;
 }

@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.ProductGallery__RadioButton {
+  display: none;
+}
+
 .ProductGallery__ThumbnailButton {
   cursor: pointer;
   border: none;
@@ -27,13 +31,18 @@
   height: 5.5rem;
   width: 5.5rem;
   z-index: 10;
+  border: 4px solid white;
+  display: inline-block;
 }
 
-.ProductGallery__ThumbnailButton:hover {
+.ProductGallery__RadioButton:not(:checked)
+  + .ProductGallery__ThumbnailButton:hover {
   opacity: 0.5;
+  border: 4px solid white;
 }
 
-.ProductGallery__ThumbnailButton:active {
+.ProductGallery__RadioButton + .ProductGallery__ThumbnailButton:active,
+.ProductGallery__RadioButton:checked + .ProductGallery__ThumbnailButton {
   opacity: 0.5;
   border: 4px solid $orange;
 }

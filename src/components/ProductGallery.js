@@ -13,16 +13,18 @@ function ProductGallery(props){
             <div className="flex-center">
                 <div className="ProductGallery__Thumbnails">
                     {props.thumbnails.map((thumbnail, idx) => (
-                        <button 
-                            className="ProductGallery__ThumbnailButton" 
-                            key={`product-gallery-thumbnail-${idx}`} 
-                            onClick={() => setImagesIdx(idx)}
-                            style={{
-                                backgroundImage: `url(${thumbnail})`
-                            }}
-                        >
-                            
-                        </button>
+                        <div key={`product-gallery-thumbnail-${idx}`} >
+                            <input name="thumbnails" type="radio" id={`c${idx}`} className="ProductGallery__RadioButton"></input>
+                            <label 
+                                htmlFor={`c${idx}`}
+                                className="ProductGallery__ThumbnailButton" 
+                                onClick={() => setImagesIdx(idx)}
+                                style={{
+                                    backgroundImage: `url(${thumbnail})`
+                                }}
+                            >    
+                            </label>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -1,14 +1,22 @@
 import { useState } from 'react';
+import useToggle from '../hooks/useToggle';
+import LightBox from './LightBox';
 import '../scss/ProductGallery.scss';
 import '../scss/partials/_utilities.scss';
 
 function ProductGallery(props){
     const [imagesIdx, setImagesIdx] = useState(0);
+    const [lightBoxIsOpen, toggleLightBoxIsOpen] = useToggle(false)
     
     return(
         <div className="ProductGallery">
             <div className="flex-center">
-                <img className="ProductGallery__MainImage" src={props.images[imagesIdx]} alt={imagesIdx}></img>
+                <img 
+                    className="ProductGallery__MainImage" 
+                    src={props.images[imagesIdx]} 
+                    alt={imagesIdx}
+                    onClick={() => toggleLightBoxIsOpen(true)}
+                ></img>
             </div>
             <div className="flex-center">
                 <div className="ProductGallery__Thumbnails">
@@ -28,6 +36,7 @@ function ProductGallery(props){
                     ))}
                 </div>
             </div>
+            {lightBoxIsOpen && <LightBox images={props.images} thumbnails={props.thumbnails} toggleLightBoxIsOpen={toggleLightBoxIsOpen} />}
         </div>
     )
 }

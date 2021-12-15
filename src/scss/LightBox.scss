@@ -1,9 +1,86 @@
-.LightBox {
-  display: none;
-  visibility: hidden;
+@import "./partials/variables";
 
-  @media screen and (min-width: 1440px) {
-    display: block;
-    visibility: visible;
+.LightBox {
+  position: absolute;
+  top: -4.6rem; //offset to cover Navbar
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.LightBox__CloseContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 34.375rem;
+  margin-top: 5.563rem;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
+}
+
+.LightBox__MainImage {
+  margin-top: 1.5rem;
+  width: 34.375rem;
+  height: 34.375rem;
+  border-radius: 0.938rem;
+  /* margin-top: 5.625rem; */
+}
+
+.LightBox__Thumbnails {
+  margin-top: 2rem;
+  width: 27.813rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.LightBox__RadioButton {
+  display: none;
+}
+
+.LightBox__ThumbnailButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.625rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 5.5rem;
+  width: 5.5rem;
+  z-index: 10;
+  // border: 4px solid rgba(0, 0, 0, 0);
+  display: inline-block;
+}
+
+.LightBox__ThumbnailOverlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 5.5rem;
+  width: 5.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.625rem;
+  border: 4px solid rgba(255, 255, 255, 0);
+  z-index: 30;
+}
+
+.LightBox__RadioButton:not(:checked)
+  + .LightBox__ThumbnailButton
+  .LightBox__ThumbnailOverlay:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 4px solid rgba(0, 0, 0, 0);
+}
+
+.LightBox__RadioButton
+  + .LightBox__ThumbnailButton:active
+  .LightBox__ThumbnailOverlay,
+.LightBox__RadioButton:checked
+  + .LightBox__ThumbnailButton
+  .LightBox__ThumbnailOverlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 4px solid $orange;
 }

@@ -43,14 +43,3 @@ function ProductGallery(props){
 
 export default ProductGallery;
 
-/* 
-<button>
-                    
-                </button>
-                <button>
-                    <img src={props.thumbnails[1]} alt="thumbnail-1" />
-                </button>
-
-                <img src={thumbnail} alt={`thumbnail-${idx}`}/>
-*/
-

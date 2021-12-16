@@ -47,5 +47,3 @@ function ProductPage() {
 }
 
 export default ProductPage;
-
-// <LightBox images={products.fallLimitedEditionSneakers.images} thumbnails={products.fallLimitedEditionSneakers.thumbnails} />

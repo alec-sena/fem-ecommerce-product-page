@@ -1,11 +1,6 @@
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import '../scss/Carousel.scss';
-/* import product1 from '../images/image-product-1.jpg';
-import product2 from '../images/image-product-2.jpg';
-import product3 from '../images/image-product-3.jpg';
-import product4 from '../images/image-product-4.jpg';
- */
 
 function Carousel(props){
 
@@ -39,8 +34,3 @@ function Carousel(props){
 export default Carousel;
 
 // documentation: https://www.npmjs.com/package/pure-react-carousel
-
-/* <Slide index={0}><img src={product1} alt="product one" /></Slide>
-<Slide index={1}><img src={product2} alt="product two" /></Slide>
-<Slide index={2}><img src={product3} alt="product three" /></Slide>
-<Slide index={3}><img src={product4} alt="product four" /></Slide> */

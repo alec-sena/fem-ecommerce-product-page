@@ -21,15 +21,65 @@
     background: none;
     border: none;
     cursor: pointer;
+
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  button:hover {
+    svg {
+      path {
+        fill: #ff7d1a;
+      }
+    }
   }
 }
 
 .LightBox__MainImage {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   width: 34.375rem;
   height: 34.375rem;
   border-radius: 0.938rem;
   /* margin-top: 5.625rem; */
+}
+
+.LightBox__Controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37.375rem;
+  height: 2.2rem;
+  z-index: 31;
+
+  button {
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    // margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      transform: scale(1);
+    }
+  }
+
+  button:hover,
+  button:active {
+    svg {
+      path {
+        // fill: #ff7d1a; not filling correctly
+      }
+    }
+  }
 }
 
 .LightBox__Thumbnails {

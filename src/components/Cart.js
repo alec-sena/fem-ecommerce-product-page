@@ -27,5 +27,3 @@ function Cart(props){
 }
 
 export default Cart;
-
-// name={props.cart[item].name} quantity={props.cart[item].quantity}

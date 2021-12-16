@@ -36,15 +36,3 @@ function CartCard(props){
 }
 
 export default CartCard;
-
-
-/* prev => ({
-                ...prev,
-                [name]: {
-                    name: name,
-                    quantity: 0,
-                    price: props.product.price,
-                    discount: props.product.discount,
-                    thumbnail: props.product.thumbnails[0]
-                }
-            }) */

@@ -7,8 +7,6 @@
   width: 95%;
   margin: 8px 2.5%;
   border-radius: 0.5rem;
-  /* box shadow is too dark, possibly too long */
-  // box-shadow: 0 2rem 2rem -0.5rem $grayish-blue;
 
   @media screen and (min-width: 1440px) {
     height: 16rem;
@@ -49,7 +47,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // min-height: 12rem;
 }
 
 .Cart__ButtonContainer {
